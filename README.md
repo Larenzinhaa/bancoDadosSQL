@@ -10,7 +10,6 @@ Este guia será dividido em etapas para demonstrar desde a criação de tabelas,
 * __UPDATE__ para atualizar os registros
 * __DELETE__ para remover os registros
 * __SELECT__ para consultar e visualizar dados
-<<<<<<< HEAD
 
 ## Passo 1: Criação do Banco de Dados e das Tabelas
 #### 1.1 Criando o DB
@@ -19,5 +18,27 @@ Este guia será dividido em etapas para demonstrar desde a criação de tabelas,
 CREATE DATABASE biblioteca;
 USE biblioteca;
 ```
-=======
->>>>>>> a9ff3371790ac4849793b1bafaa076615b148845
+#### 1.2 Criando a tabela 'editora'
+```
+CREATE TABLE editora(
+  id_editora INT PRIMARY KEY AUTO_INCREMENT,
+  nome_editora VARCHAR(100) NOT NULL,
+  pais VARCHAR(50)
+);
+```
+#### 1.3 Criando a tabela 'autor'
+```
+CREATE TABLE autor(
+  id_autor INT PRIMARY KEY AUTO_INCREMENT,
+  nome_autor VARCHAR(200),
+  data_nascimento DATE
+);
+```
+#### 1.4 Criando a tabela 'assunto'
+```
+CREATE TABLE assunto(
+  id_assunto INT PRIMARY KEY AUTO_INCREMENT,
+  descricao_assunto VARCHAR(500) NOT NULL
+);
+```
+#### 1.5 Criando a tabela 'livro'
