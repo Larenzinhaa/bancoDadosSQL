@@ -160,3 +160,14 @@ JOIN editora ON livro.editora = editora.id_editora
 JOIN autor ON livro.autor = autor.id_autor
 JOIN assunto ON livro.assunto = assunto.id_assunto;
 ```
+
+#### Passo 7.2: Exibir todos os livros com o mesmo tema 
+Consulta com filtro 'WHERE'
+
+```SQL
+SELECT livro.titulo AS titulo,
+        assunto.descricao_assunto AS tema
+FROM livro
+JOIN assunto ON  livro.assunto = assunto.id_assunto
+WHERE assunto.descricao_assunto = 'Romance';
+```
